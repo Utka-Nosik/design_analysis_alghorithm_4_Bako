@@ -3,6 +3,7 @@ package design.analysis.alghorithm4.Bako;
 import design.analysis.alghorithm4.Bako.graph.scc.CondensationGraphBuilder;
 import design.analysis.alghorithm4.Bako.graph.DirectedGraph;
 import design.analysis.alghorithm4.Bako.graph.scc.TarjanSCC;
+import design.analysis.alghorithm4.Bako.graph.topo.TopologicalSort;
 import design.analysis.alghorithm4.Bako.util.GraphData;
 import design.analysis.alghorithm4.Bako.util.GraphLoader;
 import design.analysis.alghorithm4.Bako.graph.TaskNode;
@@ -24,20 +25,16 @@ public class Main {
         System.out.println("\n--- Finding Strongly Connected Components (SCCs) ---");
         TarjanSCC sccFinder = new TarjanSCC(graph);
         List<List<String>> sccs = sccFinder.findSCCs();
-        System.out.println("Found " + sccs.size() + " SCCs:");
-        sccs.forEach(scc -> System.out.println("  - SCC (size " + scc.size() + "): " + scc));
+        System.out.println("Found " + sccs.size() + " SCCs.");
 
         System.out.println("\n--- Building Condensation Graph ---");
         CondensationGraphBuilder builder = new CondensationGraphBuilder(graph, sccs);
         DirectedGraph condensationGraph = builder.build();
-
         System.out.println("Condensation graph (DAG) built successfully!");
-        for (String sccNode : condensationGraph.getNodes()) {
-            System.out.println(
-                    "  - Node " + sccNode +
-                            " (duration: " + condensationGraph.getDuration(sccNode) + ")" +
-                            ", Neighbors: " + condensationGraph.getNeighbors(sccNode)
-            );
-        }
+
+        System.out.println("\n--- Performing Topological Sort on Condensation Graph ---");
+        TopologicalSort sorter = new TopologicalSort(condensationGraph);
+        List<String> topologicalOrder = sorter.getOrder();
+        System.out.println("Topological Order of SCCs: " + topologicalOrder);
     }
 }
