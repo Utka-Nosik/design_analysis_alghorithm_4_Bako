@@ -1,7 +1,6 @@
 package design.analysis.alghorithm4.Bako.graph.scc;
 
 import design.analysis.alghorithm4.Bako.graph.DirectedGraph;
-
 import java.util.*;
 
 public class TarjanSCC {
@@ -13,6 +12,7 @@ public class TarjanSCC {
     private final Set<String> onStack = new HashSet<>();
     private final List<List<String>> sccs = new ArrayList<>();
     private int timer = 0;
+    public long operationCount = 0;
 
     public TarjanSCC(DirectedGraph graph) {
         this.graph = graph;
@@ -28,6 +28,7 @@ public class TarjanSCC {
     }
 
     private void dfs(String at) {
+        operationCount++;
         stack.push(at);
         onStack.add(at);
         ids.put(at, timer);

@@ -1,0 +1,25 @@
+{
+  "graphName": "Large Acyclic Graph (DAG)",
+  "nodes": [
+    {"id": "V1", "duration": 2}, {"id": "V2", "duration": 3}, {"id": "V3", "duration": 2},
+    {"id": "V4", "duration": 4}, {"id": "V5", "duration": 3}, {"id": "V6", "duration": 5},
+    {"id": "V7", "duration": 2}, {"id": "V8", "duration": 3}, {"id": "V9", "duration": 4},
+    {"id": "V10", "duration": 2}, {"id": "V11", "duration": 3}, {"id": "V12", "duration": 5},
+    {"id": "V13", "duration": 2}, {"id": "V14", "duration": 3}, {"id": "V15", "duration": 4},
+    {"id": "V16", "duration": 2}, {"id": "V17", "duration": 3}, {"id": "V18", "duration": 5},
+    {"id": "V19", "duration": 2}, {"id": "V20", "duration": 3}
+  ],
+  "edges": [
+    {"source": "V1", "destination": "V2"}, {"source": "V1", "destination": "V3"},
+    {"source": "V2", "destination": "V4"}, {"source": "V3", "destination": "V5"},
+    {"source": "V4", "destination": "V6"}, {"source": "V5", "destination": "V6"},
+    {"source": "V6", "destination": "V7"}, {"source": "V7", "destination": "V8"},
+    {"source": "V7", "destination": "V9"}, {"source": "V8", "destination": "V10"},
+    {"source": "V9", "destination": "V10"}, {"source": "V10", "destination": "V11"},
+    {"source": "V11", "destination": "V12"}, {"source": "V12", "destination": "V13"},
+    {"source": "V12", "destination": "V14"}, {"source": "V13", "destination": "V15"},
+    {"source": "V14", "destination": "V15"}, {"source": "V15", "destination": "V16"},
+    {"source": "V16", "destination": "V17"}, {"source": "V16", "destination": "V18"},
+    {"source": "V17", "destination": "V19"}, {"source": "V18", "destination": "V20"}
+  ]
+}

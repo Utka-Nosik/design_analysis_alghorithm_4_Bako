@@ -1,0 +1,13 @@
+{
+  "graphName": "Small Graph with Two SCCs",
+  "nodes": [
+    {"id": "A", "duration": 5}, {"id": "B", "duration": 6}, {"id": "C", "duration": 7},
+    {"id": "D", "duration": 8}, {"id": "E", "duration": 4}, {"id": "F", "duration": 9}
+  ],
+  "edges": [
+    {"source": "A", "destination": "B"}, {"source": "B", "destination": "A"},
+    {"source": "B", "destination": "C"}, {"source": "C", "destination": "D"},
+    {"source": "D", "destination": "E"}, {"source": "E", "destination": "C"},
+    {"source": "D", "destination": "F"}
+  ]
+}

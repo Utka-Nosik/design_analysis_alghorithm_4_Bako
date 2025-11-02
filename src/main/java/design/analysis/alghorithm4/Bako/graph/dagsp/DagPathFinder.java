@@ -1,13 +1,13 @@
 package design.analysis.alghorithm4.Bako.graph.dagsp;
 
 import design.analysis.alghorithm4.Bako.graph.DirectedGraph;
-
 import java.util.*;
 
 public class DagPathFinder {
 
     private final DirectedGraph graph;
     private final List<String> topologicalOrder;
+    public long operationCount = 0;
 
     public DagPathFinder(DirectedGraph graph, List<String> topologicalOrder) {
         this.graph = graph;
@@ -23,7 +23,6 @@ public class DagPathFinder {
         }
 
         for (String node : topologicalOrder) {
-            // Initialize path starting at this node with its own duration
             if (distances.get(node) == Integer.MIN_VALUE) {
                 distances.put(node, graph.getDuration(node));
             }
@@ -31,6 +30,7 @@ public class DagPathFinder {
 
         for (String u : topologicalOrder) {
             for (String v : graph.getNeighbors(u)) {
+                operationCount++;
                 int newDist = distances.get(u) + graph.getDuration(v);
                 if (newDist > distances.get(v)) {
                     distances.put(v, newDist);

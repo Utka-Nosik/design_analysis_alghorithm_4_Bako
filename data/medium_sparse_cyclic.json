@@ -1,0 +1,17 @@
+{
+  "graphName": "Medium Sparse Cyclic Graph",
+  "nodes": [
+    {"id": "N1", "duration": 4}, {"id": "N2", "duration": 4}, {"id": "N3", "duration": 4},
+    {"id": "N4", "duration": 4}, {"id": "N5", "duration": 4}, {"id": "N6", "duration": 4},
+    {"id": "N7", "duration": 4}, {"id": "N8", "duration": 4}, {"id": "N9", "duration": 4},
+    {"id": "N10", "duration": 4}, {"id": "N11", "duration": 4}, {"id": "N12", "duration": 4}
+  ],
+  "edges": [
+    {"source": "N1", "destination": "N2"}, {"source": "N2", "destination": "N3"},
+    {"source": "N3", "destination": "N4"}, {"source": "N4", "destination": "N5"},
+    {"source": "N5", "destination": "N6"}, {"source": "N6", "destination": "N7"},
+    {"source": "N7", "destination": "N8"}, {"source": "N8", "destination": "N9"},
+    {"source": "N9", "destination": "N10"}, {"source": "N10", "destination": "N11"},
+    {"source": "N11", "destination": "N12"}, {"source": "N12", "destination": "N1"}
+  ]
+}

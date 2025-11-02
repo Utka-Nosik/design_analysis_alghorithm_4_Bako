@@ -1,0 +1,25 @@
+{
+  "graphName": "Large Graph with Many Small SCCs",
+  "nodes": [
+    {"id": "A1", "duration": 3}, {"id": "A2", "duration": 3}, {"id": "A3", "duration": 3},
+    {"id": "B1", "duration": 3}, {"id": "B2", "duration": 3}, {"id": "B3", "duration": 3},
+    {"id": "C1", "duration": 3}, {"id": "C2", "duration": 3}, {"id": "C3", "duration": 3},
+    {"id": "D1", "duration": 3}, {"id": "D2", "duration": 3}, {"id": "D3", "duration": 3},
+    {"id": "E1", "duration": 3}, {"id": "E2", "duration": 3}, {"id": "E3", "duration": 3},
+    {"id": "F1", "duration": 3}
+  ],
+  "edges": [
+    {"source": "A1", "destination": "A2"}, {"source": "A2", "destination": "A1"},
+    {"source": "A2", "destination": "B1"},
+    {"source": "B1", "destination": "B2"}, {"source": "B2", "destination": "B1"},
+    {"source": "B2", "destination": "C1"},
+    {"source": "C1", "destination": "C2"}, {"source": "C2", "destination": "C1"},
+    {"source": "C2", "destination": "D1"},
+    {"source": "D1", "destination": "D2"}, {"source": "D2", "destination": "D1"},
+    {"source": "D2", "destination": "E1"},
+    {"source": "E1", "destination": "E2"}, {"source": "E2", "destination": "E1"},
+    {"source": "E2", "destination": "F1"},
+    {"source": "A3", "destination": "B3"}, {"source": "B3", "destination": "C3"},
+    {"source": "C3", "destination": "D3"}, {"source": "D3", "destination": "E3"}
+  ]
+}

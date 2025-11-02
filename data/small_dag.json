@@ -1,0 +1,12 @@
+{
+  "graphName": "Small Acyclic Graph (DAG)",
+  "nodes": [
+    {"id": "A", "duration": 5}, {"id": "B", "duration": 10}, {"id": "C", "duration": 8},
+    {"id": "D", "duration": 4}, {"id": "E", "duration": 6}, {"id": "F", "duration": 3}
+  ],
+  "edges": [
+    {"source": "A", "destination": "B"}, {"source": "A", "destination": "C"},
+    {"source": "B", "destination": "D"}, {"source": "C", "destination": "D"},
+    {"source": "D", "destination": "E"}, {"source": "B", "destination": "F"}
+  ]
+}

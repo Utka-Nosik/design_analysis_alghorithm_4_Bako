@@ -1,0 +1,17 @@
+{
+  "graphName": "Medium Acyclic Graph (DAG)",
+  "nodes": [
+    {"id": "T1", "duration": 10}, {"id": "T2", "duration": 5}, {"id": "T3", "duration": 8},
+    {"id": "T4", "duration": 12}, {"id": "T5", "duration": 7}, {"id": "T6", "duration": 4},
+    {"id": "T7", "duration": 9}, {"id": "T8", "duration": 6}, {"id": "T9", "duration": 11},
+    {"id": "T10", "duration": 3}
+  ],
+  "edges": [
+    {"source": "T1", "destination": "T2"}, {"source": "T1", "destination": "T3"},
+    {"source": "T2", "destination": "T4"}, {"source": "T3", "destination": "T4"},
+    {"source": "T3", "destination": "T5"}, {"source": "T4", "destination": "T6"},
+    {"source": "T5", "destination": "T7"}, {"source": "T6", "destination": "T8"},
+    {"source": "T7", "destination": "T8"}, {"source": "T8", "destination": "T9"},
+    {"source": "T9", "destination": "T10"}
+  ]
+}

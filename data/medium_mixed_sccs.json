@@ -1,0 +1,17 @@
+{
+  "graphName": "Medium Graph with Mixed SCCs",
+  "nodes": [
+    {"id": "A", "duration": 10}, {"id": "B", "duration": 5}, {"id": "C", "duration": 8},
+    {"id": "D", "duration": 6}, {"id": "E", "duration": 12}, {"id": "F", "duration": 7},
+    {"id": "G", "duration": 9}, {"id": "H", "duration": 4}, {"id": "I", "duration": 3},
+    {"id": "J", "duration": 10}
+  ],
+  "edges": [
+    {"source": "A", "destination": "B"}, {"source": "B", "destination": "C"},
+    {"source": "C", "destination": "A"}, {"source": "C", "destination": "D"},
+    {"source": "D", "destination": "E"}, {"source": "E", "destination": "F"},
+    {"source": "F", "destination": "D"}, {"source": "F", "destination": "G"},
+    {"source": "G", "destination": "H"}, {"source": "H", "destination": "I"},
+    {"source": "I", "destination": "J"}, {"source": "J", "destination": "H"}
+  ]
+}

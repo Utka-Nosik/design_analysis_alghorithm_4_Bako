@@ -1,0 +1,22 @@
+{
+  "graphName": "Large Dense Cyclic Graph",
+  "nodes": [
+    {"id": "C1", "duration": 5}, {"id": "C2", "duration": 5}, {"id": "C3", "duration": 5},
+    {"id": "C4", "duration": 5}, {"id": "C5", "duration": 5}, {"id": "C6", "duration": 5},
+    {"id": "C7", "duration": 5}, {"id": "C8", "duration": 5}, {"id": "C9", "duration": 5},
+    {"id": "C10", "duration": 5}, {"id": "C11", "duration": 5}, {"id": "C12", "duration": 5},
+    {"id": "C13", "duration": 5}, {"id": "C14", "duration": 5}, {"id": "C15", "duration": 5}
+  ],
+  "edges": [
+    {"source": "C1", "destination": "C2"}, {"source": "C2", "destination": "C3"},
+    {"source": "C3", "destination": "C1"}, {"source": "C2", "destination": "C4"},
+    {"source": "C4", "destination": "C5"}, {"source": "C5", "destination": "C6"},
+    {"source": "C6", "destination": "C4"}, {"source": "C5", "destination": "C7"},
+    {"source": "C7", "destination": "C8"}, {"source": "C8", "destination": "C9"},
+    {"source": "C9", "destination": "C7"}, {"source": "C8", "destination": "C10"},
+    {"source": "C10", "destination": "C11"}, {"source": "C11", "destination": "C12"},
+    {"source": "C12", "destination": "C10"}, {"source": "C11", "destination": "C13"},
+    {"source": "C13", "destination": "C14"}, {"source": "C14", "destination": "C15"},
+    {"source": "C15", "destination": "C1"}
+  ]
+}
