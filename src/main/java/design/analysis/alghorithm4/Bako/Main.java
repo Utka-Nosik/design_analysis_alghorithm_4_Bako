@@ -1,5 +1,7 @@
 package design.analysis.alghorithm4.Bako;
 
+import design.analysis.alghorithm4.Bako.graph.dagsp.DagPathFinder;
+import design.analysis.alghorithm4.Bako.graph.dagsp.PathResult;
 import design.analysis.alghorithm4.Bako.graph.scc.CondensationGraphBuilder;
 import design.analysis.alghorithm4.Bako.graph.DirectedGraph;
 import design.analysis.alghorithm4.Bako.graph.scc.TarjanSCC;
@@ -36,5 +38,10 @@ public class Main {
         TopologicalSort sorter = new TopologicalSort(condensationGraph);
         List<String> topologicalOrder = sorter.getOrder();
         System.out.println("Topological Order of SCCs: " + topologicalOrder);
+
+        System.out.println("\n--- Finding Longest Path (Critical Path) in DAG ---");
+        DagPathFinder pathFinder = new DagPathFinder(condensationGraph, topologicalOrder);
+        PathResult criticalPath = pathFinder.findLongestPath();
+        System.out.println("Critical " + criticalPath);
     }
 }
