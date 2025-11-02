@@ -45,11 +45,3 @@ The performance of the pipeline was measured across all datasets. Key metrics in
 
 1.  **Methodology:** The implemented pipeline (SCC -> Condensation -> TopoSort -> DAG Path) is a robust and efficient method for analyzing task dependency graphs, even those with complex cyclic dependencies. It successfully transforms an intractable cyclic problem into a solvable acyclic one.
 2.  **Practical Recommendations:** For real-world project scheduling, the results highlight the importance of minimizing cyclic dependencies. Each SCC represents a tightly coupled block of tasks that cannot be linearized easily and increases the overall project duration. Breaking these cycles by re-evaluating task dependencies is the most effective strategy for simplifying the project plan and shortening the critical path.
-
-## 4. How to Run
-
-1.  Clone the repository.
-2.  Open the project in a Java IDE like IntelliJ IDEA.
-3.  Ensure Maven dependencies (`gson`, `junit-jupiter`) are installed.
-4.  Run the `main` method in `src/main/java/design/analysis/alghorithm4/Bako/Main.java`.
-5.  The analysis results for all JSON files in the `/data` directory will be printed to the console.
